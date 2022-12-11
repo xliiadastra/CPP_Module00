@@ -3,22 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jinoh <jinoh@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/11 17:18:42 by yichoi            #+#    #+#             */
-/*   Updated: 2022/12/11 17:56:19 by yichoi           ###   ########.fr       */
+/*   Created: 2022/09/15 14:42:49 by jinoh             #+#    #+#             */
+/*   Updated: 2022/09/15 14:42:50 by jinoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
-class	FirstName(string fn)
-{
-}
+# include "Contact.hpp"
+# include <iostream>
+# include <string>
+# include <iomanip>
 
-class	LastName(string ln)
-{
-}
+class PhoneBook {
+	private:
+		Contact contact[8];
+		int		len;
+		int 	last;
+		void 	printContact(int i);
+		void 	printBook();
 
-class	
+	public:
+		PhoneBook();
+		void	searchContact();
+		void 	addContact();
+};
+
+#endif
