@@ -1,19 +1,27 @@
-//#include "PhoneBook.hpp"
-//#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
-#include <iostream>
-#include <string>
+//#include <iostream>
+//#include <string>
+//#include <limits>
 
-int	main()
+int	main(void)
 {
+	std::string	cmd;
+	PhoneBook	phonebook;
+
 	std::cout << "Hello, is my PhoneBook. Enter the command if you want\n1. ADD\n2. SEARCH\n3. EXIT" << std::endl;
 	while (1)
 	{
 		std::cout << "> ";
-		std::string	cmd;
-		std::getline(std::cin, cmd);
-		if (cmd.compare("ADD") == 0)
-			std::cout << "Yes, add" << std::endl;
+//		std::cin >> std::ws;
+		std::getline(std::cin >> std::ws, cmd);
+		if (std::cin.eof())
+		{
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
+		else if (cmd.compare("ADD") == 0)
+			phonebook.addContact();
 		else if (cmd.compare("SEARCH") == 0)
 			std::cout << "Yes, search" << std::endl;
 		else if (cmd.compare("EXIT") == 0)

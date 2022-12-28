@@ -6,7 +6,8 @@ CFLAGS		= -Wall -Wextra -Werror -std=c++98
 RM		= rm
 RMFLAGS		= -f
 
-INCLUDE		= ./
+INCLUDE		= ./PhoneBook.hpp	\
+		  ./Contact.hpp		
 
 SRCS 		= PhoneBook.cpp \
 			  Contact.cpp	\

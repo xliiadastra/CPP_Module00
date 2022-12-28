@@ -10,15 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
+
 #include <iostream>
 #include <string>
+#include <limits>
+#include "Contact.hpp"
 
-class	FirstName(string fn)
+class	PhoneBook
 {
-}
+private:
+	Contact	contact[8];
+	int	last;
 
-class	LastName(string ln)
-{
-}
+public: // access specifier
+	PhoneBook();
+	void	addContact();
+};
 
-class	
+#endif
