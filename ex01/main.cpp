@@ -9,9 +9,10 @@ int	main(void)
 	std::string	cmd;
 	PhoneBook	phonebook;
 
-	std::cout << "Hello, is my PhoneBook. Enter the command if you want\n1. ADD\n2. SEARCH\n3. EXIT" << std::endl;
+//	std::cout << "Hello, is my PhoneBook. Enter the command if you want\n1. ADD\n2. SEARCH\n3. EXIT" << std::endl;
 	while (1)
 	{
+		std::cout << "Hello, is my PhoneBook. Enter the command if you want\n1. ADD\n2. SEARCH\n3. EXIT" << std::endl;
 		std::cout << "> ";
 //		std::cin >> std::ws;
 		std::getline(std::cin >> std::ws, cmd);

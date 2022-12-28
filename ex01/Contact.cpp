@@ -1,5 +1,9 @@
 #include "Contact.hpp"
 
+Contact::Contact()
+{
+}
+
 void	Contact::inputContact()
 {
         std::cout << "Enter Contact Info" << std::endl;
