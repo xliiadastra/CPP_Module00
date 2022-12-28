@@ -9,17 +9,17 @@ int	main(void)
 	std::string	cmd;
 	PhoneBook	phonebook;
 
-//	std::cout << "Hello, is my PhoneBook. Enter the command if you want\n1. ADD\n2. SEARCH\n3. EXIT" << std::endl;
 	while (1)
 	{
 		std::cout << "Hello, is my PhoneBook. Enter the command if you want\n1. ADD\n2. SEARCH\n3. EXIT" << std::endl;
 		std::cout << "> ";
-//		std::cin >> std::ws;
 		std::getline(std::cin >> std::ws, cmd);
 		if (std::cin.eof())
 		{
+			std::cout << std::endl;
 			std::cin.clear();
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::clearerr(stdin);
+//			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
 		else if (cmd.compare("ADD") == 0)
 			phonebook.addContact();
