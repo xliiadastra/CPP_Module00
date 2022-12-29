@@ -24,7 +24,7 @@ int	main(void)
 		else if (cmd.compare("ADD") == 0)
 			phonebook.addContact();
 		else if (cmd.compare("SEARCH") == 0)
-			std::cout << "Yes, search" << std::endl;
+			phonebook.searchContact();
 		else if (cmd.compare("EXIT") == 0)
 			break ;
 		else

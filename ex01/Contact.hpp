@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 class	Contact
 {
@@ -15,6 +16,9 @@ private:
 public:
 	Contact();
 	void	inputContact();
+	void	printContact();
+	void	printInfo();
+	void	printFormat(std::string str);
 };
 
 #endif
