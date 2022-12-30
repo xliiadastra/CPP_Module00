@@ -21,9 +21,8 @@ void	PhoneBook::addContact()
 
 void	PhoneBook::searchContact()
 {
-	int	index;
+	int	index(-1);
 
-	index = -1;
 	printBook();
 	std::cout << "Enter the index to search" << std::endl;
 	std::cin >> std::ws >> index;
@@ -38,9 +37,8 @@ void	PhoneBook::printPhoneBook(int& index)
 
 void	PhoneBook::printBook()
 {
-	int	index;
+	int	index(-1);
 
-	index = -1;
         std::cout << std::setw(10) << "index" << '|';
         std::cout << std::setw(10) << "first name" << '|';
         std::cout << std::setw(10) << "last name" << '|';

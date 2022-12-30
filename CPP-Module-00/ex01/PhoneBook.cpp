@@ -24,10 +24,10 @@ void 	PhoneBook::addContact()
 	contact.enterContact();
 	this->contact[last] = contact;
 	last++;
-	if (last == 8)
-		last = 0;
-	if (len < 8)
-		len++;
+	if (this->last == 8)
+		this->last = 0;
+	if (this->len < 8)
+		(this->len)++;
 }
 
 void	PhoneBook::searchContact()
@@ -57,7 +57,7 @@ void 	PhoneBook::printBook()
 	"first name" << '|' << \
 	" last name" << '|' << \
 	" nick name" << '|' << '\n';
-	while (++i < len)
+	while (++i < this->len)
 		printContact(i);
 }
 
