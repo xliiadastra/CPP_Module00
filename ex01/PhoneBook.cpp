@@ -1,11 +1,22 @@
 #include "PhoneBook.hpp"
 
+PhoneBook::PhoneBook()
+{
+	this->len = 0;
+	this->last = 0;
+}
+
 void	PhoneBook::addContact()
 {
 	Contact	contact;
 
 	contact.inputContact();
-	++len;
+	this->contact[last] = contact;
+	++last;
+	if (last == 8)
+		last = 0;
+	if (len < 8)
+		++len;
 }
 
 void	PhoneBook::searchContact()
@@ -15,13 +26,14 @@ void	PhoneBook::searchContact()
 	index = -1;
 	printBook();
 	std::cout << "Enter the index to search" << std::endl;
-	std::cin >> index;
-	printPhoneBook(index);
+	std::cin >> std::ws >> index;
+	contact[index].printInfo();
 }
 
 void	PhoneBook::printPhoneBook(int& index)
 {
-	contact[&index].printInfo();
+	std::cout << std::setw(10) << index << '|';
+	contact[index].printContact();
 }
 
 void	PhoneBook::printBook()
@@ -32,7 +44,7 @@ void	PhoneBook::printBook()
         std::cout << std::setw(10) << "index" << '|';
         std::cout << std::setw(10) << "first name" << '|';
         std::cout << std::setw(10) << "last name" << '|';
-        std::cout << std::setw(10) << "nick name" << '|' << std::endl;
+        std::cout << std::setw(10) << "nick name" << "|" << std::endl;
 	while (++index < len)
-		contact[index].printContact(index);
+		printPhoneBook(index);
 }
