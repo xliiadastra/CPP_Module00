@@ -55,7 +55,7 @@ int		main( void ) {
 	// pair로 묶어준 개체들의 순서를 가르킨다.
 
 	Account::displayAccountsInfos();
-	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
+	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) ); // 객체를 만들지 않고 사용할 수 있게 해줌.
 
 	for ( acc_int_t it( acc_begin, wit_begin );
 		  it.first != acc_end && it.second != wit_end;

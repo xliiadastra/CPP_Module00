@@ -11,12 +11,14 @@ int	main(int argc, char *argv[])
 	{
 		while(++i < argc)
 		{
-			while (*argv[i])
+			std::string	str = argv[i];
+			int j = 0;
+			while (str[j])
 			{
-				char Word = std::toupper(static_cast<char>(*argv[i]));
-				std::cout << Word;
-				argv[i]++;
+				str[j] = std::toupper(str[j]);
+				j++;
 			}
+			std::cout << str;
 		}
 		std::cout << std::endl;
 	}

@@ -11,22 +11,49 @@ void	Contact::inputContact()
         std::cout << "First Name : ";
         std::cin >> std::ws;
         std::getline(std::cin, first_name);
+        if (std::cin.eof() || std::cin.fail())
+        {
+                std::cout << "\nError !" << std::endl;
+                exit(1);
+        }
 
         std::cout << "Last Name : ";
         std::cin >> std::ws;
         std::getline(std::cin, last_name);
+        if (std::cin.eof() || std::cin.fail())
+        {
+                std::cout << "\nError !" << std::endl;
+                exit(1);
+        }
 
         std::cout << "Nick Name : ";
         std::cin >> std::ws;
         std::getline(std::cin, nick_name);
+        if (std::cin.eof() || std::cin.fail())
+        {
+                std::cout << "\nError !" << std::endl;
+                exit(1);
+        }
 
         std::cout << "Phone Number : ";
         std::cin >> std::ws;
         std::getline(std::cin, phone_number);
+        if (std::cin.eof() || std::cin.fail())
+        {
+                std::cout << "\nError !" << std::endl;
+                exit(1);
+        }
 
         std::cout << "Secret : ";
         std::cin >> std::ws;
         std::getline(std::cin, secret);
+        if (std::cin.eof() || std::cin.fail())
+        {
+                std::cout << "\nError !" << std::endl;
+                exit(1);
+        }
+        else
+                std::cout << "Created" << std::endl;
 }
 
 void	Contact::printContact()

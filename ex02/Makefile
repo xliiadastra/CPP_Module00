@@ -8,8 +8,8 @@ SRCS	= tests.cpp	\
 
 OBJS	= $(SRCS:%.cpp=%.o)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c $< -o $(<:.cpp=.o)
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
